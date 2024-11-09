@@ -1,0 +1,766 @@
+/* التنسيق العام */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+}
+
+/* تنسيق الهيدر */
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: #fff;
+    
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo img {
+    max-width: 150px;
+}
+
+header .menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+header .links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 20;
+}
+
+header .links a:hover {
+    color: #f39c12;
+}
+
+header .social-links a {
+    color: yellow;
+    margin: 0 10px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+header .social-links a:hover {
+    color: #f39c12;
+    transition: 1.1;
+}
+
+/* التنسيق للهاتف المحمول */
+@media screen and (max-width: 768px) {
+    header .links {
+        display: none;
+        flex-direction: column;
+    }
+    header .menu-toggle {
+        display: block;
+    }
+    header .links.active {
+        display: flex;
+    }
+}
+
+/* خلفية الخطوط المتحركة */
+.bg-lines span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #f39c12;
+    animation: line-animation 2s linear infinite;
+}
+
+.bg-lines span:nth-child(odd) {
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+@keyframes line-animation {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+
+/* التنسيق لقسم "من نحن" */
+.about {
+    padding: 60px 0;
+    background-color:whitesmoke;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 30px;
+    color:yellow;
+   
+}
+
+.about p {
+    font-size: 25px;
+    color: #fffbfb;
+    line-height: 1.6;
+    max-width: 800px;
+    
+}
+
+/* التنسيق لقسم المشاريع */
+.projects {
+    padding: 60px 20px;
+    background-color: #333;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 30px;
+    color: whitesmoke;
+    margin-bottom: 40px;
+}
+
+.projects_box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    
+}
+
+.projects_box .project_content {
+    width: 48%;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projects_box .project_content:hover {
+    transform: scale(1.1);
+}
+
+.projects_box .project_content img {
+    max-width: 75%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    
+}
+
+.projects_box .project_content h3 {
+    font-size: 20px;
+    color: yellow;
+    margin-bottom: 10px;
+}
+
+.projects_box .project_content p {
+    font-size: 16px;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.projects_box .project_content .link {
+    font-size: 16px;
+    color: #f39c12;
+    text-decoration: none;
+}
+
+.projects_box .project_content .link:hover {
+    text-decoration: underline;
+}
+
+
+/* التنسيق للتذييل */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+
+footer p {
+    font-size: 16px;
+}
+
+
+/* Reset some basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* تحديد خط عام للموقع */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* إعدادات الألوان العامة */
+:root {
+    --primary-color: #f39c12;
+    --secondary-color: #333;
+    --highlight-color: #9e4f0a;
+}
+
+/* تصميم الرأس */
+header {
+    background-color: #333;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+header .menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: white;
+}
+
+header .links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header .social-links a {
+    color: yellow;
+    margin: 0 10px;
+}
+
+/* لتوسيع المساحة بالاستجابة */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: left;
+    }
+
+    header .links.active {
+        display: flex;
+    }
+
+    header .menu-toggle {
+        display: block;
+        font-size: 24px;
+    }
+
+    header .social-links {
+        margin-top: 15px;
+    }
+
+    header .social-links a {
+        margin: 5px;
+    }
+}
+
+
+
+
+/* مشاريع القسم */
+.projects {
+    padding: 50px 20px;
+    background: #222;
+}
+
+.projects .projects_box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.projects .projects_box .project_content {
+    flex: 1 1 45%;
+    margin: 10px;
+}
+
+.projects .project_image {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Form section */
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+}
+
+/* تذييل الصفحة */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+}
+
+/* Responsive Design for Small Devices */
+@media (max-width: 576px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .projects .projects_box .project_content {
+        flex: 1 1 100%;
+    }
+
+    .contact input, .contact textarea {
+        font-size: 1rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
+/* تنسيق عام */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222; /* خلفية الموقع باللون الأسود */
+    color: #fff; /* النصوص باللون الأبيض */
+}
+
+/* تنسيق قسم "من نحن" */
+.about {
+    padding: 50px 0;
+    background-color: #222; /* خلفية قسم من نحن باللون الداكن */
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    margin-right: 20px;
+    padding: 20px;
+    font-size: 2rem;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 30%;
+}
+
+.about-image img {
+    width: 80%;
+    border-radius: 8px; /* إضافة زوايا دائرية للصورة */
+}
+
+/* تنسيق الروابط الاجتماعية */
+.social-links a {
+    color: #ffcc00; /* اللون الأصفر */
+    margin-left: 15px;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.2); /* تأثير التكبير عند التمرير */
+}
+
+/* تنسيق القائمة */
+.links {
+    display: flex;
+    align-items: center;
+}
+
+.links a {
+    color:red
+}
+
+
+/* الأنماط العامة */
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+/* إخفاء القائمة وإظهار زر القائمة في الأجهزة الصغيرة */
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .links {
+        display: none; /* إخفاء الروابط في الأجهزة الصغيرة */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+        cursor: pointer;
+    }
+}
+
+/* إخفاء القائمة وإظهار زر القائمة في الأجهزة الصغيرة */
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-toggle {
+    display: none; /* إخفاء زر القائمة في الشاشات الكبيرة */
+}
+
+/* الأجهزة الصغيرة - عرض زر القائمة وإخفاء القائمة */
+@media (max-width: 768px) {
+    .links {
+        display: none; /* إخفاء الروابط في الأجهزة الصغيرة */
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .links.active {
+        display: flex; /* إظهار القائمة عند النقر */
+    }
+
+    .menu-toggle {
+        display: inline-block; /* إظهار زر القائمة في الشاشات الصغيرة */
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+}
+
+
+
+/* تنسيق الشبكات الاجتماعية والفورم بجانب بعض */
+.contact .container .row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 20px;
+    
+}
+
+/* تصميم شبكة التواصل الاجتماعي */
+.contact .col-md-6 h4 {
+    font-size: 1.5rem;
+    color: yellow;
+    margin-bottom: 20px;
+    padding: 10px;
+   
+}
+
+.contact .list-unstyled {
+    list-style: none;
+    padding: 0;
+    
+}
+
+.contact .list-unstyled li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    
+}
+
+.contact .list-unstyled i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.contact .list-unstyled a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: color 0.3s ease;
+}
+
+.contact .list-unstyled a:hover {
+    color: #ffd900;
+ 
+ 
+
+}
+
+/* تنسيق نموذج الاتصال */
+.contact .form-control {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%; /* عرض كامل للحقل */
+    max-width: 80%; /* أقصى عرض للحقول 80% من الحاوية */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.contact textarea.form-control {
+    resize: none;
+}
+
+
+
+.contact button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+/* جعل العناصر فوق بعضها في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .contact .container .row {
+        flex-direction: column;
+    }
+}
+/* تنسيق قسم الاتصال */
+.contact {
+    padding: 60px 0;
+    background-color: #222;
+}
+
+.contact h2 {
+    font-size: 2.5rem;
+    color: yellow;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.contact h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 10px auto 0;
+}
+
+/* تنسيق الشبكات الاجتماعية والفورم بجانب بعض */
+.contact .container .row {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* تصميم قسم الشبكات الاجتماعية */
+.contact .col-md-6:first-child {
+    flex-basis: 35%; /* تحديد عرض 35% لقسم الشبكات الاجتماعية */
+}
+
+.contact .col-md-6 h4 {
+    font-size: 1.5rem;
+    color: yellow;
+    margin-bottom: 20px;
+}
+
+.contact .list-unstyled {
+    list-style: none;
+    padding: 0;
+}
+
+.contact .list-unstyled li {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.contact .list-unstyled i {
+    color: #007bff;
+    margin-right: 10px;
+}
+
+.contact .list-unstyled a {
+    text-decoration: none;
+    color: #f4f4f4;
+    transition: color 0.3s ease;
+}
+
+.contact .list-unstyled a:hover {
+    color: yellow;
+    scale: 1.1;
+}
+
+/* تنسيق نموذج الاتصال */
+.contact .col-md-6:last-child {
+    flex-basis: 65%; /* تحديد عرض 65% لقسم الفورم */
+}
+.contact .btn{
+    width: 70px;
+    border-radius: 5px;
+    background-color: yellow;
+    text-align: center;
+    font-size: x-large;
+ 
+}
+
+.contact .form-control {
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    width: 100%; /* عرض كامل للحقل */
+    max-width: 90%; /* أقصى عرض للحقول */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact .form-control:focus {
+    border-color: yellow;
+    border-width: 4px;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.contact .textarea.form-control {
+    resize: none;
+}
+
+
+
+/* جعل العناصر فوق بعضها في الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .contact .container .row {
+        flex-direction: column;
+    }
+    
+    /* توسيع عرض الحقول لتتناسب مع عرض الشاشة الصغيرة */
+    .contact .form-control {
+        max-width: 100%;
+    }
+}
+
+/* الأساسيات لجميع الأجهزة */
+.hero .container {
+    display: flex;
+    justify-content: flex-start;  /* وضع العناصر في بداية الحاوية (أقصى اليسار) */
+    align-items: center;  /* محاذاة العناصر عموديًا في المنتصف */
+    padding: 15px;
+}
+
+.div_text {
+    flex: 1;
+    padding: 20px;
+    margin-left: 30px;  /* إضافة مسافة بين النص والصورة */
+
+}
+
+.div_img {
+    flex: none;
+}
+
+.person {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;  /* زيادة حجم النص في h1 */
+    color: yellow;   /* تغيير اللون إلى اللون الأحمر البرتقالي */
+}
+
+.hero h2 {
+    font-size: 2rem;  /* زيادة حجم النص في h2 */
+    color: white;     /* تغيير اللون إلى اللون الأخضر */
+}
+
+.hero p {
+    font-size: 1.5rem;  /* تصغير حجم النص */
+    color: yellow;
+}
+
+.btn_no_bg {
+    padding: 5px 30px;  /* زيادة حجم الزر */
+    font-size: 1.2rem;  /* تكبير حجم الخط داخل الزر */
+    border-radius: 5px;
+    background-color: yellow;  /* إضافة تقوسات للزر */
+}
+
+/* للأجهزة الصغيرة جدًا مثل الهواتف */
+@media (max-width: 480px) {
+    .hero .container {
+        flex-direction: column;  /* ترتيب العناصر عموديًا */
+        text-align: center;      /* توسيط النص */
+        padding: 30px;
+        align-items: flex-start;  /* رفع العناصر إلى الأعلى */
+    }
+
+    .div_text {
+        flex: none;
+        margin-bottom: 30px;  /* زيادة المسافة بين النص والصورة */
+    }
+
+    .div_img {
+        flex: none;
+        margin-top: 30px;  /* إضافة مسافة بين الصورة والنص */
+    }
+
+    .person {
+        width: 80%;  /* تصغير حجم الصورة */
+        margin-top: 20px;  /* إضافة مسافة فوق الصورة */
+    }
+
+    .btn_no_bg {
+        padding: 5px 20px;  /* زيادة حجم الزر */
+        font-size: 1.2rem;  /* تكبير حجم الخط داخل الزر */
+        border-radius: 5px;  /* إضافة تقوسات للزر */
+    }
+}       
+

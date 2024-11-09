@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | nemer_339775</title>
+    <meta name="description" content="شركة التسويق الالكتروني وتصميم مواقع الويب والبرمجة بلغة بايثون">
+    
+    <!-- روابط الأنماط والأيقونات -->
+    <link rel="icon" href="img/logo_icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="شعار">
+            </a>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="links">  
+                <a href="index.html">الرئيسية</a>
+                <a href="projects.html">المشاريع</a>
+                <a href="about.html">من نحن</a>  
+                <a href="contact.html">اتصل بي</a>                        
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- خلفية الخطوط المتحركة -->
+    <div class="bg-lines">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span>
+    </div>
+
+    <!-- قسم المشاريع -->
+    <section class="projects">
+        <div class="container">
+            <div class="top_section">
+                <h2><span>المشاريع</span></h2>
+            </div>
+
+            <!-- المشاريع -->
+            <div class="projects_box">
+                <!-- مشروع -->
+                <div class="project_content">
+                    <img src="img/project1.jpg" alt="مشروع 1" class="project_image">
+                    <div class="text">
+                        <h3><span>تصميم مواقع 1</span></h3>
+                        <h3><a href="#">موقع شركة الإلكترونيات الحديثة</a></h3>
+                        <p>موقع إلكتروني لشركة متخصصة في بيع الأجهزة الإلكترونية مثل الهواتف الذكية، الأجهزة المنزلية، والحواسيب، يقدم واجهة مستخدم سهلة وجذابة.</p>
+                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+                </div>
+
+                <!-- مشروع -->
+                <div class="project_content">
+                    <img src="img/project2.jpg" alt="مشروع 2" class="project_image">
+                    <div class="text">
+                        <h3><span>تصميم مواقع 2</span></h3>
+                        <h3><a href="#">موقع شركة التحكم الصناعي المؤتمت</a></h3>
+                        <p>موقع يقدم حلولًا مؤتمتة لتحسين الكفاءة والسلامة في العمليات الصناعية باستخدام تقنيات التحكم الإلكتروني.</p>
+                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+                </div>
+
+                <!-- مشروع -->
+                <div class="project_content">
+                    <img src="img/project3.jpg" alt="مشروع 3" class="project_image">
+                    <div class="text">
+                        <h3><span>تصميم مواقع 3</span></h3>
+                        <h3><a href="#">موقع شركة المستقبل للإلكترونيات</a></h3>
+                        <p>موقع لبيع مكونات وقطع غيار إلكترونية متنوعة تناسب احتياجات الصناع والمطورين.</p>
+                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+                </div>
+
+                <!-- مشروع -->
+                <div class="project_content">
+                    <img src="img/project4.jpg" alt="مشروع 4" class="project_image">
+                    <div class="text">
+                        <h3><span>تصميم مواقع 4</span></h3>
+                        <h3><a href="#">موقع شركة الموبايلات الرائدة</a></h3>
+                        <p>موقع يقدم خدمات صيانة الهواتف الذكية بأنواعها المختلفة وبأفضل الأسعار.</p>
+                        <a href="#" class="link"><i class="fa-solid fa-arrow-up"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 | جميع الحقوق محفوظة | نمر ابراهيم</p>
+        </div>
+    </footer>
+
+    <!-- مكتبة jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- سكربتات الموقع -->
+    <script>
+        // إظهار وإخفاء القائمة
+        $('.menu-toggle').click(function () {
+            $('.links').toggleClass('active');
+        });
+
+        // تغيير لون رأس الصفحة عند التمرير
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 50) {
+                $('header').css('background-color', '#333');
+            } else {
+                $('header').css('background-color', 'transparent');
+            }
+        });
+    </script>
+    
+</body>
+</html>

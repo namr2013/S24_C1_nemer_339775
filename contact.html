@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | nemer_339775</title>
+    <meta name="description" content="شركة التسويق الالكتروني وتصميم مواقع الويب والبرمجة بلغة بايثون">
+    
+    <!-- روابط الأنماط والأيقونات -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="شعار">
+            </a>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="links">  
+                <a href="index.html">الرئيسية</a>
+                <a href="projects.html">المشاريع</a>
+                <a href="about.html">من نحن</a>  
+                <a href="contact.html">اتصل بي</a>                        
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- خلفية الخطوط المتحركة -->
+    <div class="bg-lines">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span>
+    </div>
+
+    <!-- قسم التواصل -->
+    <section class="contact py-5">
+        <div class="container">
+            <div class="row">
+                <!-- وسائل التواصل -->
+                <div class="col-md-6">
+                    <h4>تواصل معي</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:example@mail.com">S24_C1_nemer_339775@mail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+9630123456789">00963123456789</a></li>
+                        <li><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+                        <li><i class="fa-brands fa-twitter"></i> <a href="https://www.twitter.com" target="_blank">Twitter</a></li>
+                        <li><i class="fa-brands fa-instagram"></i> <a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+
+                <!-- نموذج التواصل -->
+                <div class="col-md-6">
+                    <form action="">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="اسمك" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="بريدك الإلكتروني" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" placeholder="رقم الجوال">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="الموضوع" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="اكتب رسالتك هنا" required></textarea>
+                        </div>
+                        <div class="btn">                        
+                            <a href="contact.html">ارسال</a> 
+                        </div>           
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- سكريبت القائمة -->
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.links').classList.toggle('active');
+        });
+    </script>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2024 | جميع الحقوق محفوظة | نمر ابراهيم</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- إضافة مكتبة jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- سكربتات الموقع الخاصة بك -->
+    <script>
+        $(document).ready(function () {
+            // إخفاء وإظهار القائمة في الأجهزة الصغيرة
+            $('.menu-toggle').click(function () {
+                $('.links').toggleClass('active');
+            });
+
+            // تغيير اللون عند التمرير
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('header').css('background-color', '#333');
+                } else {
+                    $('header').css('background-color', 'transparent');
+                }
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>

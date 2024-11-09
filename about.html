@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | nemer_339775</title>
+    <meta name="description" content="شركة التسويق الالكتروني وتصميم مواقع الويب والبرمجة بلغة بايثون">
+    
+    <!-- روابط الأنماط والأيقونات -->
+    <link rel="stylesheet" href="css/style.css">    
+    <link rel="icon" href="img/logo_icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- رأس الصفحة -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.png" alt="شعار">
+            </a>
+            <div class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="links">  
+                <a href="index.html">الرئيسية</a>
+                <a href="projects.html">المشاريع</a>
+                <a href="about.html">من نحن</a>  
+                <a href="contact.html">اتصل بي</a>                        
+            </div>
+            <div class="social-links">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- خلفية الخطوط المتحركة -->
+    <div class="bg-lines">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span>
+    </div>
+<!-- قسم من نحن -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-content d-flex align-items-center">
+            <div class="about-text">
+                <h2>معلومات عني</h2>
+                <p>حاصل على شهادة إجازة بالهندسة الإلكترونية ، متخصص في تصميم وتطوير المواقع الإلكترونية باستخدام أحدث التقنيات وأسعى دائماً لتقديم حلول مبتكرة وفعالة لزبائني مع ضمان توفير تجربة مستخدم ممتازة وتصميم واجهات جذابة وسهلة الاستخدام.
+
+                    أعمل على بناء مواقع ويب سريعة ومتجاوبة تعمل بسلاسة على جميع الأجهزة، سواء كانت أجهزة كمبيوتر، هواتف ذكية، أو أجهزة لوحية. وتحسين محركات البحث وتحسين الأداء وتطوير واجهات التطبيقات الحديثة.
+                    
+                    فإذا كنت تبحث عن مطور ويب لتحويل فكرتك إلى موقع ويب فعال، يمكنني مساعدتك وبناء موقع ويب متكامل.</p>
+            </div>
+            <div class="about-image">
+                <img src="img/about.jpg" alt="من نحن" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+    
+    
+
+    <!-- سكريبت القائمة -->
+    <script src="js/main.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.links').classList.toggle('active');
+        });
+    </script>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <p>&copy; 2024 | جميع الحقوق محفوظة | نمر ابراهيم</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- إضافة مكتبة jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- سكربتات الموقع الخاصة بك -->
+    <script>
+        $(document).ready(function () {
+            // إخفاء وإظهار القائمة في الأجهزة الصغيرة
+            $('.menu-toggle').click(function () {
+                $('.links').toggleClass('active');
+            });
+
+            // تغيير اللون عند التمرير
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('header').css('background-color', '#333');
+                } else {
+                    $('header').css('background-color', 'transparent');
+                }
+            });
+        });
+    </script>
+    
+    
+</body>
+</html>
